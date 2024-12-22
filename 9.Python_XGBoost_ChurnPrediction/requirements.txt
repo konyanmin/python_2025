@@ -4,4 +4,5 @@ pandas
 plotly
 scikit-learn
 seaborn
+streamlit
 xgboost
