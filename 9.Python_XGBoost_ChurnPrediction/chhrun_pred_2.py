@@ -13,6 +13,8 @@ import os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, 'model.pkl')
 scaler_path = os.path.join(current_dir, 'scaler.pkl')
+pic_2_path = os.path.join(current_dir, 'Pic 2.png')
+pic_1_path = os.path.join(current_dir, 'Pic 1.png')
 
 # Load the trained model
 with open(model_path, 'rb') as file:
@@ -47,7 +49,7 @@ default_values = [
 ]
 
 # Sidebar setup
-st.sidebar.image("Pic 1.png", use_container_width=True)  # Display Pic 1
+st.sidebar.image(pic_2_path, use_container_width=True)  # Display Pic 1
 st.sidebar.header("User Inputs")
 
 # Collect user inputs
@@ -72,7 +74,7 @@ input_data_scaled = input_data.copy()
 input_data_scaled[scale_vars] = scaler.transform(input_data[scale_vars])
 
 # App Header
-st.image("Pic 2.png", use_container_width=True)  # Display Pic 2
+st.image(pic_2_path, use_container_width=True)  # Display Pic 2
 st.title("Customer Churn Prediction")
 
 # Page Layout
