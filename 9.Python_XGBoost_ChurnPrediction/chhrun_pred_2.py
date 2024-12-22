@@ -23,7 +23,7 @@ with open(model_path, 'rb') as file:
 #     model = pickle.load(file)
 
 with open(scalar_path, 'rb') as scalar_file:
-    model = pickle.load(scalar_file)
+    scalar = pickle.load(scalar_file)
     
 # Load the MinMaxScaler
 # with open('scaler.pkl', 'rb') as file:
