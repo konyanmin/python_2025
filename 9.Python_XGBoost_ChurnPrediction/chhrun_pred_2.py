@@ -15,6 +15,7 @@ model_path = os.path.join(current_dir, 'model.pkl')
 scaler_path = os.path.join(current_dir, 'scaler.pkl')
 pic_1_path = os.path.join(current_dir, 'Pic 1.PNG')
 pic_2_path = os.path.join(current_dir, 'Pic 2.PNG')
+excel_path = os.path.join(current_dir, 'feature_importance.xlsx')
 
 # Load the trained model
 with open(model_path, 'rb') as file:
@@ -84,7 +85,7 @@ left_col, right_col = st.columns(2)
 with left_col:
     st.header("Feature Importance")
     # Load feature importance data from the Excel file
-    feature_importance_df = pd.read_excel("feature_importance.xlsx", usecols=["Feature", "Feature Importance Score"])
+    feature_importance_df = pd.read_excel(excel_path, usecols=["Feature", "Feature Importance Score"])
     # Plot the feature importance bar chart
     fig = px.bar(
         feature_importance_df.sort_values(by="Feature Importance Score", ascending=True),
