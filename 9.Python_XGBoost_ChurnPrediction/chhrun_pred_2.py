@@ -12,7 +12,7 @@ import os
 # Get the directory where your script is located
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, 'model.pkl')
-scaler_path = os.path.join(current_dir, 'scalar.pkl')
+scaler_path = os.path.join(current_dir, 'scaler.pkl')
 
 # Load the trained model
 with open(model_path, 'rb') as file:
