@@ -12,7 +12,7 @@ import os
 # Get the directory where your script is located
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, 'model.pkl')
-scalar_path = os.path.join(current_dir, 'scalar.pkl')
+scaler_path = os.path.join(current_dir, 'scalar.pkl')
 
 # Load the trained model
 with open(model_path, 'rb') as file:
@@ -22,8 +22,8 @@ with open(model_path, 'rb') as file:
 # with open('model.pkl', 'rb') as file:
 #     model = pickle.load(file)
 
-with open(scalar_path, 'rb') as scalar_file:
-    scalar = pickle.load(scalar_file)
+with open(scaler_path, 'rb') as scaler_file:
+    scaler = pickle.load(scaler_file)
     
 # Load the MinMaxScaler
 # with open('scaler.pkl', 'rb') as file:
