@@ -13,8 +13,8 @@ import os
 current_dir = os.path.dirname(os.path.abspath(__file__))
 model_path = os.path.join(current_dir, 'model.pkl')
 scaler_path = os.path.join(current_dir, 'scaler.pkl')
-pic_1_path = os.path.join(current_dir, 'Pic 1.png')
-pic_2_path = os.path.join(current_dir, 'Pic 2.png')
+pic_1_path = os.path.join(current_dir, 'Pic 1.PNG')
+pic_2_path = os.path.join(current_dir, 'Pic 2.PNG')
 
 # Load the trained model
 with open(model_path, 'rb') as file:
