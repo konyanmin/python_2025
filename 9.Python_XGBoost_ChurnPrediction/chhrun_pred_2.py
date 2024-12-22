@@ -8,7 +8,7 @@ import plotly.express as px
 st.set_page_config(layout="wide")
 
 # Load the trained model
-with open('best_model.pkl', 'rb') as file:
+with open('model.pkl', 'rb') as file:
     model = pickle.load(file)
 
 # Load the MinMaxScaler
