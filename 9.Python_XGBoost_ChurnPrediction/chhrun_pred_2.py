@@ -7,9 +7,19 @@ import plotly.express as px
 # Set Streamlit layout to wide
 st.set_page_config(layout="wide")
 
+import os
+
+# Get the directory where your script is located
+current_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(current_dir, 'model.pkl')
+
 # Load the trained model
-with open('model.pkl', 'rb') as file:
+with open(model_path, 'rb') as file:
     model = pickle.load(file)
+
+# Load the trained model
+# with open('model.pkl', 'rb') as file:
+#     model = pickle.load(file)
 
 # Load the MinMaxScaler
 with open('scaler.pkl', 'rb') as file:
